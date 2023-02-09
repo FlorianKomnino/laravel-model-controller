@@ -20,13 +20,22 @@
     <main class="bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-2">
-                    @foreach ($movies as $movie)
-                        <h3>
-                            {{$movie->title}};
-                        </h3> 
-                    @endforeach
-                </div>
+                @foreach ($movies as $movie)
+                    <div class="col-2 card">
+                            <h3>
+                                {{$movie->title}}
+                            </h3> 
+                            <span>
+                                {{$movie->nationality}}
+                            </span>
+                            <div class="date">
+                                Release date: {{$movie->date}}
+                            </div>
+                            <div class="vote">
+                                Rating: {{$movie->vote}}
+                            </div>
+                    </div>
+                @endforeach
             </div>
 
         </div>
