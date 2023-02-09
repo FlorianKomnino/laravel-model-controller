@@ -20,8 +20,12 @@
     <main class="bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    Hello Universe!
+                <div class="col-2">
+                    @foreach ($movies as $movie)
+                        <h3>
+                            {{$movie->title}};
+                        </h3> 
+                    @endforeach
                 </div>
             </div>
 
